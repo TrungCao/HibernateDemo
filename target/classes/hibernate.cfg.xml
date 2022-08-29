@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="connection.url">jdbc:sqlserver://localhost:1433;databaseName=hibernate;trustServerCertificate=true</property>
+		<property name="connection.username">TrungCT4</property>
+		<property name="connection.password">123654</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+		
+		<!-- dung de show cau lenh sql -->
+		<property name="show_sql">true</property>
+		
+		<!-- Generate Schema with Hibernate. -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<mapping class="vn.trung.model.Cource" />
+		<mapping class="vn.trung.model.Fresher" />
+		<mapping class="vn.trung.model.Address" />
+		<mapping class="vn.trung.model.Group" />
+
+	</session-factory>
+
+</hibernate-configuration>
