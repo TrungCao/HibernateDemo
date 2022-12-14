@@ -1,52 +1,62 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>vn.trung</groupId>
-  <artifactId>HibernateDemo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>HibernateDemo</name>
-  <description>HibernateDemo</description>
-  
-  
-  <properties>
-		<java-version>1.8</java-version>
-		<spring-version>5.1.5.RELEASE</spring-version>
-		<hibernate-core>5.4.23.Final</hibernate-core>
-		<mssql-jdbc>10.2.0.jre8</mssql-jdbc>
-	</properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>vn.trung</groupId>
+    <artifactId>HibernateDemo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>HibernateDemo</name>
+    <description>HibernateDemo</description>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
-				<configuration>
-					<source>${java-version}</source>
-					<target>${java-version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-		
-		
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>${hibernate-core}</version>
-</dependency>
+    <properties>
+        <java-version>1.8</java-version>
+        <spring-version>5.1.5.RELEASE</spring-version>
+        <hibernate-core>5.4.23.Final</hibernate-core>
+        <mssql-jdbc>10.2.0.jre8</mssql-jdbc>
+    </properties>
 
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${java-version}</source>
+                    <target>${java-version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-<dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>${mssql-jdbc}</version>
-</dependency>
-		
-	
-	</dependencies>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-core}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen -->
+
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>${mssql-jdbc}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+
+    </dependencies>
 </project>
